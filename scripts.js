@@ -79,3 +79,13 @@ let validation = (d, m, y) => {
 
   }
 } // validation function
+
+let formOutPut = (dayB, monthB, yearB, birthIndex) => {
+  if ((dayB > 0 && monthB > 0 && yearB > 0) && (dayB <= 31 && monthB <= 12 && yearB > 0)) { //output validation
+    if (document.getElementById("male").checked) {
+      output.innerHTML = `Your Akan Name is <span>${maleNames[birthIndex]}</span> <br/> You were born on <span>${daysOfTheWeek[birthIndex]} ${dayB}-${monthsOfTheYear[monthB-1]}-${yearB}</span>`
+    } else if (document.getElementById("female").checked) {
+      output.innerHTML = `Your Akan Name is <span>${femaleNames[birthIndex]}</span> <br/> You were born on <span>${daysOfTheWeek[birthIndex]} ${dayB}-${monthsOfTheYear[monthB-1]}-${yearB}</span> `
+    } else alert("Please Select You Gender")
+  }
+}
