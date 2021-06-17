@@ -89,3 +89,31 @@ let formOutPut = (dayB, monthB, yearB, birthIndex) => {
     } else alert("Please Select You Gender")
   }
 }
+
+let submission = e => {
+  e.preventDefault();
+
+  let dayB = document.getElementById("day").value; //day value
+  let monthB = document.getElementById("month").value; //month value
+  let yearB = document.getElementById("year").value; //year value
+  let birthIndex = dataCollection(dayB, monthB, yearB); //date of birth data collection function
+  let output = document.getElementById("output");
+  output.innerHTML = "" // clear output after reload
+  let form = document.getElementById("form");
+  validation(dayB, monthB, yearB); //validation
+  formOutPut(dayB, monthB, yearB, birthIndex); // display function
+  form.reset(); //reset form after submission function
+}
+
+let generate = document.querySelector(".gen-button"); //form display button
+let closeBtn = document.querySelector(".fa-times") //form closing button
+generate.addEventListener("click", (e) => {
+  e.preventDefault()
+  document.querySelector(".fom-cont").classList.add("flx"); //add display class
+})
+
+closeBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  document.querySelector(".fom-cont").classList.remove("flx"); //remove display class
+})
+document.getElementById("submit").addEventListener('click', submission); // submit button EventListener;
