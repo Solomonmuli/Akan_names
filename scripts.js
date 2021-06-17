@@ -59,3 +59,23 @@ let dataCollection = (day, month, year) => {
   return dayOfBirthIndex;
 
 }
+let validation = (d, m, y) => {
+  if (d === "") {
+    alert("Please add day of birth")
+  } else if ((d <= 0) || (d > 31)) {
+    alert("invalid day")
+
+  }
+  if (m === "") {
+    alert("Please add Month Of Birth")
+  } else if ((m <= 0) || (m > 12)) {
+    alert("invalid month")
+
+  }
+  if (y === "") {
+    alert("Please add year Of Birth")
+  } else if ((y <= 0) || (y.length > 4)) {
+    alert("invalid year")
+
+  }
+} // validation function
