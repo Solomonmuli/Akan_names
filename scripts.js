@@ -36,3 +36,26 @@ let centuryCode = century => {
     }
     return code;
   } // century code 
+
+//date of birth data function
+let dataCollection = (day, month, year) => {
+  let dd = parseInt(day);
+
+  let mm = monthCode[parseInt(month) - 1]; //month code
+  let cc = centuryCode(Math.floor(year / 100)); // century code
+  let yy = parseInt(year.slice(-2));
+  let yearCode = (yy + Math.floor(yy / 4)) % noOfDays //year code)
+  let dayOfBirthIndex;
+
+  if ((((cc === 6 && yy === 0) || (yy % 4 === 0 && yy !== 0)) && ((month - 1) <= 1))) {
+    //leap year
+    dayOfBirthIndex = (yearCode + mm + cc + dd - 1) % noOfDays;
+
+  } else {
+    //ordinary year
+    dayOfBirthIndex = (dd + mm + cc + yy + Math.floor(yy / 4)) % noOfDays
+  }
+
+  return dayOfBirthIndex;
+
+}
