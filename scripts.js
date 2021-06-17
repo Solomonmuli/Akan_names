@@ -10,7 +10,7 @@ const noOfDays = 7 //number of days in a week
 const monthsOfTheYear = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 const totalDaysOfMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-let monthCode = [] //month code according to Gregian calendar system
+let monthCode = [] //month code 
 
 let monthCodeGenerator = () => {
   let mod = 0;
@@ -20,4 +20,19 @@ let monthCodeGenerator = () => {
 
   }
   return mod;
-} //month Code Generator
+} //month Code Generate
+
+monthCodeGenerator();
+let centuryCode = century => {
+    let code;
+    if (century % 4 === 0) {
+      code = 6;
+    } else if (century === 1 || (century - 1) % 4 === 0) {
+      code = 4;
+    } else if ((century + 1) % 4 === 0) {
+      code = 0;
+    } else if (century === 2 || (century / 2) % 2 !== 0) {
+      code = 2;
+    }
+    return code;
+  } // century code 
