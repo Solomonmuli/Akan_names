@@ -102,11 +102,10 @@ let submission = e => {
   let form = document.getElementById("form");
   validation(dayB, monthB, yearB); //validation
   formOutPut(dayB, monthB, yearB, birthIndex); // display function
-  form.reset(); //reset form after submission function
+  form.reset();  //reset form after submission function
 }
 
-let generate = document.querySelector(".gen-button"); //form display button
-let closeBtn = document.querySelector(".fa-times") //form closing button
+
 generate.addEventListener("click", (e) => {
   e.preventDefault()
   document.querySelector(".fom-cont").classList.add("flx"); //add display class
