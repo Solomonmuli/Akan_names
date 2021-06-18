@@ -21,7 +21,7 @@ Akan names are derived from Ghanian culture. Frequently in Ghana, children are g
 
 ---
 
-<!-- Ilive link to the application-->
+<!-- live link to the application-->
 ## Live Server
 
 [Demo Link]()
@@ -29,8 +29,12 @@ Akan names are derived from Ghanian culture. Frequently in Ghana, children are g
 
 ---
 
-## T
+## Setup||Installation
 
+- Fork repository on github click [here](https://github.com/Solomonmuli/Akan_names) .
+- Clone to your local Machine.
+- Run on VS code 
+- Ensure you have chrome application 
 
 
 ---
