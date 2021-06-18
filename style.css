@@ -3,10 +3,13 @@
   margin: 0;
 }
 body{
-  background: ;
+  background-image: url("child.jpg");
+  background-size:;
+  background-repeat: no-repeat;
+ 
+  /* background-image:linear-gradient(green,white) ; */
 }
 #form{
   width:70%;
   margin: auto;
-  margin-bottom: px;
 }
