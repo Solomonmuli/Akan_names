@@ -105,14 +105,4 @@ let submission = e => {
   form.reset();  //reset form after submission function
 }
 
-
-generate.addEventListener("click", (e) => {
-  e.preventDefault()
-  document.querySelector(".fom-cont").classList.add("flx"); //add display class
-})
-
-closeBtn.addEventListener('click', (e) => {
-  e.preventDefault()
-  document.querySelector(".fom-cont").classList.remove("flx"); //remove display class
-})
 document.getElementById("submit").addEventListener('click', submission); // submit button EventListener;

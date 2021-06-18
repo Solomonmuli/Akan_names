@@ -4,7 +4,7 @@
 }
 body{
   background-image: url("child.jpg");
-  background-size:;
+  background-size: cover;
   background-repeat: no-repeat;
  
   /* background-image:linear-gradient(green,white) ; */
@@ -12,4 +12,12 @@ body{
 #form{
   width:70%;
   margin: auto;
+}
+.output{
+  width:70%;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow:2px 2px 5px red;
+  
 }
